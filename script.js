@@ -70,3 +70,13 @@ dinnerBtn.addEventListener('click', () => {
   const randomMeal = getRandomMeal(meals.dinner);
   displayMeal('Dinner', randomMeal.name, randomMeal.image, randomMeal.recipeLink);
 });
+
+// Function to handle language change
+document.getElementById('languageSelect').addEventListener('change', function () {
+  const selectedLanguage = this.value;
+  if (selectedLanguage === 'hi') {
+    window.location.href = 'hindi.html';
+  } else {
+    window.location.href = 'index.html'; // Redirect back to the default (English) page
+  }
+});
